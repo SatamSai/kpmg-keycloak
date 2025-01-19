@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Emirates Medium';
+    src: font-url('/Fonts/Emirates Medium.ttf') format("truetype");
+}
+
+:root {
+    --textColor: #f6f5f7;
+    --textOffColor: #7c858d;
+    --baseColor: #23333f;
+    --baseDarkColor: #231F20;
+    --baseLightColor: #E7002A;
+    --secColor: #11f7e2;
+}
+
+body {
+    background: white !important;
+    width: cover;
+    height: 100%;
+}
+
+.card-pf {
+    position: absolute;
+    border: 4px solid blue;
+    box-shadow: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 60px !important;
+    width: 95%;
+    max-width: 450px;
+}
+
+.heading,
+#kc-page-title {
+    display: flex;
+    flex-direction: column;
+    color: blue;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.logo-img {
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.form-inputs {
+    max-height: 400px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+#kc-form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.pf-c-form-control {
+    border: 1px solid black;
+    width: 100%;
+    font-size: 14px;
+    height: 32px !important;
+}
+
+.toggle-password {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    padding: 0px 12px;
+}
+
+.show-pass {
+    display: block;
+}
+
+.hide-pass {
+    display: none;
+}
+
+.pf-c-button {
+    background-color: white !important;
+    width: auto;
+    border: 1.5px solid blue;
+    text-transform: uppercase;
+    color: blue !important;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    width: auto !important;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.pf-c-button.full {
+    width: 100% !important;
+}
+
+.pf-c-button:hover {
+    transition: all 0.5s ease;
+    background-color: blue !important;
+    color: white !important;
+}
+
+
+#kc-register-link,
+#kc-login-link {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+.form-group::after {
+    padding: 0;
+}
+
+.form-group::before {
+    padding: 0;
+}
+
+#kc-register-form>.form-inputs>.form-group {
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+#kc-register-link>span>a:focus {
+    outline: none !important;
+}
+
+#kc-form-reset-psw {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#separator,
+#kc-info {
+    display: none;
+}
