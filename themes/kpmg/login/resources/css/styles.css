@@ -54,6 +54,11 @@ body {
     display: flex;
     gap: 5px;
     position: relative;
+    align-items: center;
+}
+
+#terms {
+    margin: 0px;
 }
 
 #kc-form-buttons {

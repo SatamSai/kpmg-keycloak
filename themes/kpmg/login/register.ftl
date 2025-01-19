@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('suffix',properties.kcFormGroupErrorClass!)}">
-                    <input type="text" id="suffix" class="${properties.kcInputClass!}" name="suffix" value="" placeholder='Suffix'/><div class="required">*</div>
+                    <input type="text" id="suffix" class="${properties.kcInputClass!}" name="suffix" value="" placeholder='Suffix'/>
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('email',properties.kcFormGroupErrorClass!)}">
@@ -50,6 +50,10 @@
                         </div>     
                         <div class="required">*</div>
                     </div>
+
+                <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('email',properties.kcFormGroupErrorClass!)}">
+                    <input type="checkbox" id="terms" name="terms" required/> I have read and agreeed to the site's <a>Privacy Policy</a>
+                </div>
             </div>
             </#if>
 
