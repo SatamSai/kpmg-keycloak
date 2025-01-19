@@ -18,6 +18,25 @@ body {
     height: 100%;
 }
 
+
+.bg-img {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url('../img/bg-img.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img>img {
+    width: 100%;
+    height: 100%;
+    image-resolution: auto;
+}
+
 .card-pf {
     position: absolute;
     border: 4px solid blue;
@@ -28,6 +47,7 @@ body {
     padding: 30px 60px !important;
     width: 95%;
     max-width: 450px;
+    z-index: 2;
 }
 
 .heading,
@@ -93,16 +113,42 @@ body {
 
 .pf-c-button {
     background-color: white !important;
-    width: auto;
     border: 1.5px solid blue;
     text-transform: uppercase;
     color: blue !important;
     font-weight: 600;
     border-radius: 3px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     width: auto !important;
     display: flex;
     transition: all 0.5s ease;
+}
+
+.kc-social-links {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.kc-social-links>li {
+    display: flex;
+    justify-content: center;
+}
+
+.zocial {
+    padding: 5px 10px;
+    border: 1.5px solid blue;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.zocial:hover {
+    transition: all 0.5s ease;
+    background-color: blue !important;
+    color: white !important;
+    text-decoration: none;
 }
 
 .pf-c-button.full {

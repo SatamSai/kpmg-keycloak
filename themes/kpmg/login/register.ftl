@@ -5,17 +5,6 @@
     <#elseif section = "form">
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
             <div class="form-inputs">
-                <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('firstName',properties.kcFormGroupErrorClass!)}">
-                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName" value="${(register.formData.firstName!'')}" placeholder='${msg("firstName")}'/><div class="required">*</div>
-                </div>
-
-                <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('lastName',properties.kcFormGroupErrorClass!)}">
-                    <input type="text" id="lastName" class="${properties.kcInputClass!}" name="lastName" value="${(register.formData.lastName!'')}" placeholder='${msg("lastName")}'/><div class="required">*</div>
-                </div>
-
-                <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('suffix',properties.kcFormGroupErrorClass!)}">
-                    <input type="text" id="suffix" class="${properties.kcInputClass!}" name="suffix" value="" placeholder='Suffix'/>
-                </div>
 
                 <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('email',properties.kcFormGroupErrorClass!)}">
                     <input type="text" id="email" class="${properties.kcInputClass!}" name="email" value="${(register.formData.email!'')}" autocomplete="email" placeholder='${msg("email")}'/><div class="required">*</div>
@@ -23,12 +12,8 @@
 
             <#if !realm.registrationEmailAsUsername>
                 <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('username',properties.kcFormGroupErrorClass!)}">
-                    <div class="${properties.kcLabelWrapperClass!}">
-                        <label for="username" class="${properties.kcLabelClass!}">${msg("username")}</label>
-                    </div>
-                    <div class="${properties.kcInputWrapperClass!}">
-                        <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" />
-                    </div>
+                    <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" placeholder='${msg("username")}'/>
+                    <div class="required">*</div>
                 </div>
             </#if>
 
@@ -52,7 +37,7 @@
                     </div>
 
                 <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('email',properties.kcFormGroupErrorClass!)}">
-                    <input type="checkbox" id="terms" name="terms" required/> I have read and agreeed to the site's <a>Privacy Policy</a>
+                    <input type="checkbox" id="terms" name="terms" required/> I have read and agreed to the site's <a>Privacy Policy</a>
                 </div>
             </div>
             </#if>
