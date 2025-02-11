@@ -56,7 +56,7 @@
 
                         <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('password-confirm', properties.kcFormGroupErrorClass!)}">
                             <input type="password" id="password-confirm" class="${properties.kcInputClass!}" name="password-confirm" placeholder='${msg("passwordConfirm")}'/>
-                            <div type="button" class="toggle-password" data-target="password">
+                            <div type="button" class="toggle-password" data-target="password-confirm">
                                 <img class="show-pass" src="${url.resourcesPath}/img/show.svg"/>
                                 <img class="hide-pass" src="${url.resourcesPath}/img/hide.svg"/>
                             </div>     

@@ -106,6 +106,7 @@ body {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: relative;
 }
 
 #terms {
