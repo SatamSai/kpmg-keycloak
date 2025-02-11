@@ -199,6 +199,11 @@ body {
     justify-content: center;
 }
 
+.social-logo-img{
+    width: 25px;
+    margin-right: 10px;
+}
+
 .zocial:hover {
     transition: all 0.5s ease;
     background-color: #2652CD !important;

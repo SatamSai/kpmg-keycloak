@@ -29,6 +29,7 @@
                             <#list social.providers as p>
                                 <li class="${properties.kcFormSocialAccountListLinkClass!}">
                                     <a href="${p.loginUrl}" id="zocial-${p.alias}" class="zocial ${p.providerId}">
+                                        <img src="${url.resourcesPath}/img/google.webp" class="social-logo-img"/>
                                         <span>${p.displayName}</span>
                                     </a>
                                 </li>
