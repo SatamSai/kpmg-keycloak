@@ -13,72 +13,109 @@
 }
 
 body {
-    background: white !important;
+    background: #021631 !important;
     width: cover;
     height: 100%;
+    display: flex;
+    position: relative;
 }
 
+.left-content {
+    width: 50%;
+    position: relative;
+}
 
 .bg-img {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    background: url('../img/bg-img.jpeg');
-    background-repeat: no-repeat;
+    background: url('../img/bg-img.png') no-repeat center bottom;
     background-size: cover;
+    background-origin: content-box;
 }
 
-.bg-img>img {
+.left-content .text {
+    position: absolute;
+    top: 10%;
     width: 100%;
-    height: 100%;
-    image-resolution: auto;
+    z-index: 10;
+    text-align: center;
+    color: #51253E;
+}
+
+.text-small {
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.text-big {
+    font-size: 100px;
+    line-height: 100px;
+    font-style: italic;
+}
+
+.right-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-pf-page {
+    width: 100%;
 }
 
 .card-pf {
-    position: absolute;
-    border: 4px solid blue;
     box-shadow: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px 60px !important;
+    padding: 0px !important;
     width: 95%;
-    max-width: 450px;
+    max-width: 500px !important;
     z-index: 2;
+    border: 0px;
+    background-color: transparent;
 }
 
 .heading,
 #kc-page-title {
     display: flex;
     flex-direction: column;
-    color: blue;
-    font-weight: 600;
-    text-transform: uppercase;
+    align-items: center;
+    color: #A79EF7;
+    font-weight: 400;
+    font-size: 32px;
 }
 
 .logo-img {
-    width: 350px;
+    width: 160px;
     margin-bottom: 30px;
 }
 
 .form-inputs {
-    max-height: 400px;
-    overflow: auto;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-group {
     display: flex;
     gap: 5px;
-    position: relative;
     align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 #terms {
-    margin: 0px;
+    margin: 20px 0px;
+    color: white;
+    font-size: 14px;
+}
+
+#terms a {
+    color: #2652CD;
 }
 
 #kc-form-buttons {
@@ -91,14 +128,16 @@ body {
     border: 1px solid black;
     width: 100%;
     font-size: 14px;
-    height: 32px !important;
+    border-radius: 30px;
+    height: 40px !important;
+    padding: 0px 20px;
 }
 
 .toggle-password {
     display: flex;
     align-items: center;
     position: absolute;
-    right: 10px;
+    right: 0px;
     height: 100%;
     padding: 0px 12px;
 }
@@ -112,16 +151,25 @@ body {
 }
 
 .pf-c-button {
-    background-color: white !important;
-    border: 1.5px solid blue;
+    background-color: #2652CD !important;
     text-transform: uppercase;
-    color: blue !important;
+    color: white;
     font-weight: 600;
-    border-radius: 3px;
+    border-radius: 30px;
     margin-bottom: 13px;
-    width: auto !important;
+    width: 100%;
     display: flex;
     transition: all 0.5s ease;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#kc-social-providers {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .kc-social-links {
@@ -138,15 +186,21 @@ body {
 
 .zocial {
     padding: 5px 10px;
-    border: 1.5px solid blue;
-    border-radius: 3px;
+    border: 1.5px solid #2652CD;
+    border-radius: 40px;
     font-size: 14px;
     transition: all 0.5s ease;
+    height: 50px;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .zocial:hover {
     transition: all 0.5s ease;
-    background-color: blue !important;
+    background-color: #2652CD !important;
     color: white !important;
     text-decoration: none;
 }
@@ -157,7 +211,7 @@ body {
 
 .pf-c-button:hover {
     transition: all 0.5s ease;
-    background-color: blue !important;
+    background-color: #2652CD !important;
     color: white !important;
 }
 
@@ -167,6 +221,13 @@ body {
     display: flex;
     justify-content: center;
     margin: 5px 0px;
+    font-size: 14px;
+    color: white
+}
+
+#kc-register-link a,
+#kc-login-link a {
+    color: #2652CD
 }
 
 .form-group::after {
@@ -201,4 +262,102 @@ a {
 #separator,
 #kc-info {
     display: none;
+}
+
+#step-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    z-index: 100;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#step-2.show-form {
+    height: 100vh;
+    width: 100vw;
+}
+
+.password-section {
+    max-width: 440px;
+    width: 95%;
+}
+
+.password-section .form-group {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.password-section #kc-form-buttons {
+    padding: 0 !important;
+}
+
+.password-section .title {
+    font-size: 32px;
+    color: #001532;
+    width: 100%;
+    text-align: center;
+}
+
+#step-2 .header {
+    background-color: #001532;
+    width: 100%;
+    height: 90px;
+    padding: 20px;
+    display: flex;
+    position: relative;
+}
+
+#step-2 .header .back-button {
+    background-color: #2652CD;
+    color: white;
+    font-size: 16px;
+    padding: 14px 24px;
+    cursor: pointer;
+    border-radius: 40px;
+    line-height: 22px;
+}
+
+#step-2 .header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert{
+    padding: 0px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 0px;
+    color: red;
+}
+
+@media only screen and (max-width:800px) {
+    .left-content {
+        width: 0px;
+        overflow: hidden;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .login-pf-page {
+        display: flex;
+        justify-content: center;
+    }
 }

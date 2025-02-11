@@ -3,10 +3,7 @@
 
     
     <#if section = "header">
-        <div class="heading">
-<img src="${url.resourcesPath}/img/kpmg_logo.webp" class="logo-img"/>
-            ${msg("LoginHeader")}
-        </div>
+        ${msg("LoginHeader")}
     <#elseif section = "form">
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
         <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
@@ -18,7 +15,6 @@
                         <#else>
                             <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autocomplete="off" placeholder="<#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>" />
                         </#if>
-                        <div class="required">*</div>
                     </div>
 
                     <div class="${properties.kcFormGroupClass!}">
@@ -26,8 +22,7 @@
                         <div type="button" class="toggle-password" data-target="password">
                             <img class="show-pass" src="${url.resourcesPath}/img/show.svg"/>
                             <img class="hide-pass" src="${url.resourcesPath}/img/hide.svg"/>
-                        </div>                        
-                        <div class="required">*</div>
+                        </div>  
                     </div>
 
                     <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
@@ -36,6 +31,7 @@
                     </div>
                 </form>
             </#if>
+            
             <#if realm.password && social.providers??>
                 <div id="kc-social-providers" class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}">
                     <ul class="${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 4>${properties.kcFormSocialAccountDoubleListClass!}</#if>">
@@ -59,7 +55,7 @@
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
             <div id="kc-registration">
                 <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span>
-            </div>
+        </div>
         </#if>
     </#if>
 
