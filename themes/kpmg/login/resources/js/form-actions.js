@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (terms) {
         const errorsContainer = errorDiv.children[1]
-        const errors = errorsContainer.innerHTML.split("<br>")
+        let errors = errorsContainer.innerHTML.split("<br>")
+        errors = errors.filter(error => !error.toLowerCase().includes("username"))
         const nonPassErrors = errors.filter(error => !error.toLowerCase().includes("password"))
         const passErrors = errors.filter(error => error.toLowerCase().includes("password"))
         errorsContainer.innerHTML = nonPassErrors.length > 0 ? nonPassErrors.join("<br>") : passErrors.join("<br>")
