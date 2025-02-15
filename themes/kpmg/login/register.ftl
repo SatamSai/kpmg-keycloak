@@ -9,8 +9,14 @@
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
             <div class="form-inputs" id="step-1">
 
+                <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('firstName',properties.kcFormGroupErrorClass!)}">
+                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName" value="${(register.formData.firstName!'')}" placeholder='${msg("firstName")}'/>
+                </div>
+                <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('lastName',properties.kcFormGroupErrorClass!)}">
+                    <input type="text" id="lastName" class="${properties.kcInputClass!}" name="lastName" value="${(register.formData.lastName!'')}" placeholder='${msg("lastName")}'/>
+                </div>
                 <#if !realm.registrationEmailAsUsername>
-                    <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('username', properties.kcFormGroupErrorClass!)}">
+                    <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('username', properties.kcFormGroupErrorClass!)}" id="username-group">
                         <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" placeholder='${msg("username")}'/>
                     </div>
                 </#if>

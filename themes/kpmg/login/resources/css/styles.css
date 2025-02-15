@@ -199,7 +199,7 @@ body {
     justify-content: center;
 }
 
-.social-logo-img{
+.social-logo-img {
     width: 25px;
     margin-right: 10px;
 }
@@ -286,6 +286,12 @@ a {
     gap: 40px;
 }
 
+#username-group {
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0px !important;
+}
+
 #step-2.show-form {
     height: 100vh;
     width: 100vw;
@@ -341,7 +347,7 @@ a {
     transform: translate(-50%, -50%);
 }
 
-.alert{
+.alert {
     padding: 0px !important;
     width: 100%;
     display: flex;

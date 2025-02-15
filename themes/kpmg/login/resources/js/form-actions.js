@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
+    const email = document.getElementById("email");
+
+    email.addEventListener("input", (event) => {
+        const username = document.getElementById("username");
+        if(username){
+            username.value = event.target.value;
+        }
+    });
     const toggleButtons = document.querySelectorAll(".toggle-password");
 
     toggleButtons.forEach(button => {
@@ -60,3 +69,4 @@ window.addEventListener('click', (e) => {
         step2.classList.add("show-form")
     }
 })
+
