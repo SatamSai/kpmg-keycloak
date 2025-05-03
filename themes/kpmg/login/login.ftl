@@ -1,8 +1,7 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??); section>
-
-    
     <#if section = "header">
+        <img src="${url.resourcesPath}/img/magda_logo.svg" class="logo-img"/>
         ${msg("LoginHeader")}
     <#elseif section = "form">
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>

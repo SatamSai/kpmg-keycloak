@@ -14,6 +14,7 @@
     </#if>
     <title>${msg("loginTitle",(realm.displayName!''))}</title>
     <link rel="icon" href="${url.resourcesPath}/img/logo.webp" />
+    <link rel="stylesheet" href="https://use.typekit.net/drs2bbm.css">
     
     <#if properties.stylesCommon?has_content>
         <#list properties.stylesCommon?split(' ') as style>
