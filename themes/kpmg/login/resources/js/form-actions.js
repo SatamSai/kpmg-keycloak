@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    const email = document.getElementById("email");
+    const email = document.getElementById("email") || document.getElementById("username");
 
     email.addEventListener("input", (event) => {
         const username = document.getElementById("username");
