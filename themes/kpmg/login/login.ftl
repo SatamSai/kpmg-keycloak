@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="kc-forgot-password">
-                        <a href="http://localhost:3000/reset-password">Forgot Password?</a>
+                        Don't Remember <a href="http://localhost:3000/reset-password">Reset Password?</a>
                     </div>
                     <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
                         <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>

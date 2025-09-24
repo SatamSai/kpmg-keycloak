@@ -140,6 +140,7 @@ body {
     text-align: left;
     margin-top: -5px;
     font-size: 14px;
+    color: white;
 }
 
 .kc-forgot-password a {
@@ -147,6 +148,7 @@ body {
     color: rgb(38, 82, 205);
     text-decoration: none;
     transition: color 0.2s ease;
+    font-size: 14px;
 }
 
 .kc-forgot-password a:hover {
