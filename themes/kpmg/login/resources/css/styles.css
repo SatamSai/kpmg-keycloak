@@ -134,6 +134,27 @@ body {
     letter-spacing: 1.5px;
 }
 
+.kc-forgot-password {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    text-align: left;
+    margin-top: -5px;
+    font-size: 14px;
+}
+
+.kc-forgot-password a {
+    font-size: 0.85rem;
+    color: rgb(38, 82, 205);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.kc-forgot-password a:hover {
+    color: rgb(59, 130, 246);
+    text-decoration: underline;
+}
+
+
 .pf-c-form-control {
     border: 1px solid black;
     width: 100%;
